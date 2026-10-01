@@ -1,0 +1,20 @@
+# unpacked data (ships as data/*.tar.gz.part*) and regenerated outputs
+nets/*
+!nets/README.md
+output/
+logs/*
+!logs/.gitkeep
+
+# reassembled whole archives (reassemble.sh deletes them after extraction)
+data/*.tar.gz
+
+# resumable-submission checkpoints and BC monitoring CSVs
+.submit_*
+scripts/LFC/bc_rms/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+_paperfig_*.ipynb
