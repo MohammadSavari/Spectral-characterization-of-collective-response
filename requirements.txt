@@ -1,0 +1,28 @@
+# Python environment used to generate nets/ and figures/ in this package, on a
+# Digital Research Alliance of Canada cluster. Versions are the ones actually
+# used; cluster-local version suffixes (e.g. "+computecanada") are stripped
+# since they are not resolvable off-cluster.
+
+# --- Scientific/graph stack (Python 3.10) ---
+# On the cluster these come from environment modules:
+#   module load StdEnv/2020 gcc/9.3.0 graph-tool/2.56 python/3.10
+# graph-tool is NOT pip-installable - use conda-forge
+# (`conda install -c conda-forge graph-tool=2.56`) or your distro's package manager.
+graph-tool==2.56
+numpy==1.25.2
+pandas==2.1.0
+scipy==1.11.2
+networkx==3.1
+matplotlib==3.7.2
+
+# --- Notebook execution (scripts/spec_div/run_paper_figs.sh, scripts/figures/) ---
+ipykernel==6.25.1
+ipython==8.15.0
+jupyter_client==8.3.1
+jupyter_core==5.3.1
+nbconvert==7.16.6
+nbformat==5.10.4
+nbclient==0.10.2
+
+# Figures 3 and S3-S5 render text with LaTeX (plt.rc('text', usetex=True) and
+# the mathptmx package), so a TeX installation must be on PATH.
